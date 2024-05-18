@@ -1,12 +1,25 @@
-﻿// const powerTo = (num, power) => {
-//     return num ** power;
-// };
-
-// console.log(powerTo(3, 4));
-function powerTo(num, power) {
-    return num ** (power ?? 2);
+﻿function sum(a, b) {
+    return a + b;
+}
+function sub(a, b) {
+    return a - b;
 }
 
-console.log(powerTo(25));
+function power(a, b) {
+    return a ** b;
+}
 
-const canAccessWebSite = age => (age >= 18 ? 'Да' : 'Нет');
+function calc(a, b, fn) {
+    console.log(fn.name);
+    const result = fn(a, b);
+    return result;
+}
+
+const res = calc(1, 2, sum);
+console.log(res);
+
+const res2 = calc(1, 2, sub);
+console.log(res2);
+
+const res3 = calc(3, 5, power);
+console.log(res3);
