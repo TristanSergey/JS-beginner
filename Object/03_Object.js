@@ -23,7 +23,7 @@ const wallet = {
 
     replenishmentOfBalance: function (reason, sum) {
         this.balance += sum;
-        this.operations.push({ reason: reason, sum: sum });
+        this.operations.push({ reason, sum });
         this.numberOfOperations++;
         return true;
     },
@@ -43,7 +43,7 @@ const wallet = {
         }
         this.numberOfOperations++;
         this.balance -= sum;
-        this.operations.push({ reason: reason, sum: -sum });
+        this.operations.push({ reason, sum: -sum });
         return true;
     },
 };
